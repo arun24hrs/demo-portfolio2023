@@ -252,25 +252,25 @@ export default function Home({ details, allDetails }) {
             </Box>
           </HStack>
         </Box>
-        {/* <Grid>
-        {items.map((el) => (
-          <Box border={"1px solid red"} onClick={()=>handleClick(el.name)}>
-            <Heading size={"md"}>{el.name || "N/A"}</Heading>
-            <Text>{el.description || "N/A"}</Text>
-            <HStack gap={3}>
-              <HStack>
-                <StarIcon />
-                <Text>{el.watchers}</Text>
-              </HStack>
-              <HStack>
-                <LinkIcon />
-                <Text>{el.forks_count}</Text>
-              </HStack>
-              <Badge colorScheme='purple'>{el.language || "N/A"}</Badge>
-            </HStack>
-          </Box>
-        ))}
-        </Grid> */}
+        <Grid>
+    {items.map((el) => (
+      <Box key={el.name} border={"1px solid red"} onClick={()=>handleClick(el.name)}>
+        <Heading size={"md"}>{el.name || "N/A"}</Heading>
+        <Text>{el.description || "N/A"}</Text>
+        <HStack gap={3}>
+          <HStack>
+            <StarIcon />
+            <Text>{el.watchers}</Text>
+          </HStack>
+          <HStack>
+            <LinkIcon />
+            <Text>{el.forks_count}</Text>
+          </HStack>
+          <Badge colorScheme='purple'>{el.language || "N/A"}</Badge>
+        </HStack>
+      </Box>
+    ))}
+    </Grid>
       </main>
     </>
   );

@@ -19,7 +19,7 @@ const Projects = ({allDetails}) => {
   return (
     <Grid>
     {items.map((el) => (
-      <Box border={"1px solid red"} onClick={()=>handleClick(el.name)}>
+      <Box key={el.name} border={"1px solid red"} onClick={()=>handleClick(el.name)}>
         <Heading size={"md"}>{el.name || "N/A"}</Heading>
         <Text>{el.description || "N/A"}</Text>
         <HStack gap={3}>
